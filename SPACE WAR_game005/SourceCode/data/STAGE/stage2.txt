@@ -1,0 +1,1715 @@
+#==============================================================================
+#
+#==============================================================================
+#
+# 『モデルビューワ』スクリプトファイル [model.txt]
+# Author : AKIRA TANAKA
+#
+#==============================================================================
+SCRIPT			# この行は絶対消さないこと！
+
+#------------------------------------------------------------------------------
+# テクスチャ数
+#------------------------------------------------------------------------------
+NUM_TEXTURE = 3
+
+#------------------------------------------------------------------------------
+# テクスチャファイル名
+#------------------------------------------------------------------------------
+TEXTURE_FILENAME = data/TEXTURE/sky001.jpg				# [0]空テクスチャ
+TEXTURE_FILENAME = data/TEXTURE/ground000.png			# [1]地面テクスチャ
+TEXTURE_FILENAME = data/TEXTURE/wall_building000.png	# [2]壁テクスチャ
+
+#------------------------------------------------------------------------------
+# モデル数
+#------------------------------------------------------------------------------
+NUM_MODEL = 12
+
+#------------------------------------------------------------------------------
+# モデルファイル名
+#------------------------------------------------------------------------------
+MODEL_FILENAME = data/MODEL/building1.x				# [0]ビル
+MODEL_FILENAME = data/MODEL/building2.x				# [1]ビル
+MODEL_FILENAME = data/MODEL/building3.x				# [2]ビル
+MODEL_FILENAME = data/MODEL/building4.x				# [3]ビル
+MODEL_FILENAME = data/MODEL/building5.x				# [4]ビル
+MODEL_FILENAME = data/MODEL/building6.x				# [5]ビル
+MODEL_FILENAME = data/MODEL/building7.x				# [6]ビル
+MODEL_FILENAME = data/MODEL/building8.x				# [7]ビル
+MODEL_FILENAME = data/MODEL/PS2.x				    # [8 ]PS
+MODEL_FILENAME = data/MODEL/PS3.x				    # [9 ]PS
+MODEL_FILENAME = data/MODEL/PS4.x				    # [10]PS
+MODEL_FILENAME = data/MODEL/PS5.x				    # [11]PS
+
+#------------------------------------------------------------------------------
+# カメラ情報
+#------------------------------------------------------------------------------
+CAMERASET
+	POS = -540.0 220.0 -540.0		# 視点
+	REF = 0.0 0.0 0.0				# 注視点
+END_CAMERASET
+
+#------------------------------------------------------------------------------
+# ライト情報
+#------------------------------------------------------------------------------
+LIGHTSET
+	DIRECTION = 0.22 -0.87 0.44		# 方向
+	DIFFUSE = 1.0 1.0 1.0			# 拡散光
+END_LIGHTSET
+
+LIGHTSET
+	DIRECTION = -0.18 0.88 -0.44	# 方向
+	DIFFUSE = 0.65 0.65 0.65		# 拡散光
+END_LIGHTSET
+
+LIGHTSET
+	DIRECTION = 0.89 -0.11 0.44		# 方向
+	DIFFUSE = 0.15 0.15 0.15		# 拡散光
+END_LIGHTSET
+
+#------------------------------------------------------------------------------
+# 空情報
+#------------------------------------------------------------------------------
+SKYSET
+	TEXTYPE = 0
+	MOVE = 0.00002
+END_SKYSET
+
+#------------------------------------------------------------------------------
+# 地面情報
+#------------------------------------------------------------------------------
+FIELDSET
+	TEXTYPE = 1
+	POS = 0 0 0
+	ROT = 0 0 0
+	BLOCK = 30 30
+	SIZE = 200 200
+END_FIELDSET
+
+#------------------------------------------------------------------------------
+# 下の壁情報
+#------------------------------------------------------------------------------
+WALLSET
+	TEXTYPE = 1
+	POS = 0 -200 3000
+	ROT = 0 180 0
+	BLOCK = 30 1
+	SIZE = 200 200
+END_WALLSET
+
+WALLSET
+	TEXTYPE = 1
+	POS = 3000 -200 0
+	ROT = 0 270 0
+	BLOCK = 30 1
+	SIZE = 200 200
+END_WALLSET
+
+WALLSET
+	TEXTYPE = 1
+	POS = 0 -200 -3000
+	ROT = 0 0 0
+	BLOCK = 30 1
+	SIZE = 200 200
+END_WALLSET
+
+WALLSET
+	TEXTYPE = 1
+	POS = -3000 -200 0
+	ROT = 0 90 0
+	BLOCK = 30 1
+	SIZE = 200 200
+END_WALLSET
+
+#------------------------------------------------------------------------------
+# 上の壁情報
+#------------------------------------------------------------------------------
+WALLSET
+	TEXTYPE = 2
+	POS = 0 0 3000
+	ROT = 0 0 0
+	BLOCK = 3 1
+	SIZE = 2000 900
+END_WALLSET
+
+WALLSET
+	TEXTYPE = 2
+	POS = 3000 0 0
+	ROT = 0 90 0
+	BLOCK = 3 1
+	SIZE = 2000 900
+END_WALLSET
+
+WALLSET
+	TEXTYPE = 2
+	POS = 0 0 -3000
+	ROT = 0 180 0
+	BLOCK = 3 1
+	SIZE = 2000 900
+END_WALLSET
+
+WALLSET
+	TEXTYPE = 2
+	POS = -3000 0 0
+	ROT = 0 -90 0
+	BLOCK = 3 1
+	SIZE = 2000 900
+END_WALLSET
+
+#------------------------------------------------------------------------------
+# モデル配置情報
+#------------------------------------------------------------------------------
+
+#------------------
+# ビル0(1)
+#------------------
+MODELSET
+	TYPE = 5
+	POS = 50.00 0.00 50.00
+	ROT = 0 -180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 8
+	POS = 150.00 0.00 50.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = 250.00 0.00 50.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = 350.00 0.00 50.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 1
+	POS = 450.00 0.00 50.00
+	ROT = 0 -180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = 550.00 0.00 50.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = 650.00 0.00 50.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = 750.00 0.00 50.00
+	ROT = 0 180 0
+END_MODELSET
+
+#------------------
+# ビル0(1)
+#------------------
+MODELSET
+	TYPE = 5
+	POS = 50.00 0.00 550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = 150.00 0.00 550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = 250.00 0.00 550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = 350.00 0.00 550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = 450.00 0.00 550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 6
+	POS = 550.00 0.00 550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = 650.00 0.00 550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = 750.00 0.00 550.00
+	ROT = 0 0 0
+END_MODELSET
+
+
+#------------------
+# ビル0(1)
+#------------------
+MODELSET
+	TYPE = 5
+	POS = 50.00 0.00 1350.00
+	ROT = 0 -180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 8
+	POS = 150.00 0.00 1350.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = 250.00 0.00 1350.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = 350.00 0.00 1350.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 1
+	POS = 450.00 0.00 1350.00
+	ROT = 0 -180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = 550.00 0.00 1350.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = 650.00 0.00 1350.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = 750.00 0.00 1350.00
+	ROT = 0 180 0
+END_MODELSET
+
+#------------------
+# ビル0(1)
+#------------------
+MODELSET
+	TYPE = 5
+	POS = 50.00 0.00 1850.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = 150.00 0.00 1850.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = 250.00 0.00 1850.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = 350.00 0.00 1850.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = 450.00 0.00 1850.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 6
+	POS = 550.00 0.00 1850.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = 650.00 0.00 1850.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = 750.00 0.00 1850.00
+	ROT = 0 0 0
+END_MODELSET
+
+#------------------
+# ビル0(1)
+#------------------
+MODELSET
+	TYPE = 5
+	POS = 50.00 0.00 -550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = 150.00 0.00 -550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = 250.00 0.00 -550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = 350.00 0.00 -550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = 450.00 0.00 -550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 6
+	POS = 550.00 0.00 -550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = 650.00 0.00 -550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = 750.00 0.00 -550.00
+	ROT = 0 0 0
+END_MODELSET
+
+#------------------
+# ビル0(1)
+#------------------
+MODELSET
+	TYPE = 5
+	POS = 50.00 0.00 -1050.00
+	ROT = 0 -180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 8
+	POS = 150.00 0.00 -1050.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = 250.00 0.00 -1050.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = 350.00 0.00 -1050.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 1
+	POS = 450.00 0.00 -1050.00
+	ROT = 0 -180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = 550.00 0.00 -1050.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = 650.00 0.00 -1050.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = 750.00 0.00 -1050.00
+	ROT = 0 180 0
+END_MODELSET
+
+#------------------
+# ビル0(1)
+#------------------
+MODELSET
+	TYPE = 5
+	POS = 50.00 0.00 -1550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = 150.00 0.00 -1550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = 250.00 0.00 -1550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = 350.00 0.00 -1550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = 450.00 0.00 -1550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 6
+	POS = 550.00 0.00 -1550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = 650.00 0.00 -1550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = 750.00 0.00 -1550.00
+	ROT = 0 0 0
+END_MODELSET
+
+#------------------
+# ビル0(1)
+#------------------
+MODELSET
+	TYPE = 5
+	POS = 50.00 0.00 -2050.00
+	ROT = 0 -180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 8
+	POS = 150.00 0.00 -2050.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = 250.00 0.00 -2050.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = 350.00 0.00 -2050.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 1
+	POS = 450.00 0.00 -2050.00
+	ROT = 0 -180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = 550.00 0.00 -2050.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = 650.00 0.00 -2050.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = 750.00 0.00 -2050.00
+	ROT = 0 180 0
+END_MODELSET
+
+#------------------
+# ビル3(1)
+#------------------
+MODELSET
+	TYPE = 3
+	POS = -1150.00 0.00 -1550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = -1050.00 0.00 -1550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = -950.00 0.00 -1550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 1
+	POS = -850.00 0.00 -1550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = -750.00 0.00 -1550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 4
+	POS = -650.00 0.00 -1550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = -550.00 0.00 -1550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 1
+	POS = -450.00 0.00 -1550.00
+	ROT = 0 0 0
+END_MODELSET
+
+#------------------
+# ビル2(1)
+#------------------
+MODELSET
+	TYPE = 5
+	POS = -1150.00 0.00 -2050.00
+	ROT = 0 -180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 9
+	POS = -1050.00 0.00 -2050.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = -950.00 0.00 -2050.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = -850.00 0.00 -2050.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 1
+	POS = -750.00 0.00 -2050.00
+	ROT = 0 -180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 6
+	POS = -650.00 0.00 -2050.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = -550.00 0.00 -2050.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = -450.00 0.00 -2050.00
+	ROT = 0 180 0
+END_MODELSET
+
+#------------------
+# ビル2(1)
+#------------------
+MODELSET
+	TYPE = 1
+	POS = -450.00 0.00 -350.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 0
+	POS = -450.00 0.00 -450.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 0
+	POS = -450.00 0.00 -550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = -450.00 0.00 -650.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = -450.00 0.00 -750.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 0
+	POS = -450.00 0.00 -850.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 0
+	POS = -450.00 0.00 -950.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 1
+	POS = -450.00 0.00 -1050.00
+	ROT = 0 0 0
+END_MODELSET
+
+#------------------
+# ビル2(1)
+#------------------
+MODELSET
+	TYPE = 1
+	POS = -1150.00 0.00 -350.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 11
+	POS = -1150.00 0.00 -450.00
+	ROT = 0 90 0
+END_MODELSET
+
+MODELSET
+	TYPE = 0
+	POS = -1150.00 0.00 -550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = -1150.00 0.00 -650.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = -1150.00 0.00 -750.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 0
+	POS = -1150.00 0.00 -850.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 11
+	POS = -1150.00 0.00 -950.00
+	ROT = 0 90 0
+END_MODELSET
+
+MODELSET
+	TYPE = 1
+	POS = -1150.00 0.00 -1050.00
+	ROT = 0 0 0
+END_MODELSET
+
+#------------------
+# ビル2(1)
+#------------------
+MODELSET
+	TYPE = 1
+	POS = -450.00 0.00 150.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 0
+	POS = -450.00 0.00 250.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 0
+	POS = -450.00 0.00 350.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = -450.00 0.00 450.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = -450.00 0.00 550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 0
+	POS = -450.00 0.00 650.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 0
+	POS = -450.00 0.00 750.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 1
+	POS = -450.00 0.00 850.00
+	ROT = 0 0 0
+END_MODELSET
+
+#------------------
+# ビル2(1)
+#------------------
+MODELSET
+	TYPE = 1
+	POS = -1150.00 0.00 150.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 11
+	POS = -1150.00 0.00 250.00
+	ROT = 0 90 0
+END_MODELSET
+
+MODELSET
+	TYPE = 0
+	POS = -1150.00 0.00 350.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = -1150.00 0.00 450.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = -1150.00 0.00 550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 0
+	POS = -1150.00 0.00 650.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 11
+	POS = -1150.00 0.00 750.00
+	ROT = 0 90 0
+END_MODELSET
+
+MODELSET
+	TYPE = 1
+	POS = -1150.00 0.00 850.00
+	ROT = 0 0 0
+END_MODELSET
+
+#------------------
+# ビル2(1)
+#------------------
+MODELSET
+	TYPE = 5
+	POS = -1150.00 0.00 1350.00
+	ROT = 0 -180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 8
+	POS = -1050.00 0.00 1350.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 1
+	POS = -950.00 0.00 1350.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = -850.00 0.00 1350.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 1
+	POS = -750.00 0.00 1350.00
+	ROT = 0 -180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 4
+	POS = -650.00 0.00 1350.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = -550.00 0.00 1350.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = -450.00 0.00 1350.00
+	ROT = 0 180 0
+END_MODELSET
+
+#------------------
+# ビル2(1)
+#------------------
+MODELSET
+	TYPE = 5
+	POS = -1150.00 0.00 1850.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = -1050.00 0.00 1850.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = -950.00 0.00 1850.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = -850.00 0.00 1850.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = -750.00 0.00 1850.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 6
+	POS = -650.00 0.00 1850.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = -550.00 0.00 1850.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = -450.00 0.00 1850.00
+	ROT = 0 0 0
+END_MODELSET
+
+#------------------
+# ビル3(1)
+#------------------
+MODELSET
+	TYPE = 3
+	POS = 1250.00 0.00 -1550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = 1350.00 0.00 -1550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = 1450.00 0.00 -1550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 1
+	POS = 1550.00 0.00 -1550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = 1650.00 0.00 -1550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 4
+	POS = 1750.00 0.00 -1550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = 1850.00 0.00 -1550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 1
+	POS = 1950.00 0.00 -1550.00
+	ROT = 0 0 0
+END_MODELSET
+
+#------------------
+# ビル3(1)
+#------------------
+MODELSET
+	TYPE = 5
+	POS = 1250.00 0.00 -2050.00
+	ROT = 0 -180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 9
+	POS = 1350.00 0.00 -2050.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = 1450.00 0.00 -2050.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = 1550.00 0.00 -2050.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 1
+	POS = 1650.00 0.00 -2050.00
+	ROT = 0 -180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 6
+	POS = 1750.00 0.00 -2050.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = 1850.00 0.00 -2050.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = 1950.00 0.00 -2050.00
+	ROT = 0 180 0
+END_MODELSET
+
+#------------------
+# ビル3(1)
+#------------------
+MODELSET
+	TYPE = 1
+	POS = 1250.00 0.00 -350.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 0
+	POS = 1250.00 0.00 -450.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 0
+	POS = 1250.00 0.00 -550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = 1250.00 0.00 -650.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = 1250.00 0.00 -750.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 0
+	POS = 1250.00 0.00 -850.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 0
+	POS = 1250.00 0.00 -950.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 1
+	POS = 1250.00 0.00 -1050.00
+	ROT = 0 0 0
+END_MODELSET
+
+#------------------
+# ビル3(1)
+#------------------
+MODELSET
+	TYPE = 1
+	POS = 1950.00 0.00 -350.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 11
+	POS = 1950.00 0.00 -450.00
+	ROT = 0 90 0
+END_MODELSET
+
+MODELSET
+	TYPE = 0
+	POS = 1950.00 0.00 -550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = 1950.00 0.00 -650.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = 1950.00 0.00 -750.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 0
+	POS = 1950.00 0.00 -850.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 11
+	POS = 1950.00 0.00 -950.00
+	ROT = 0 90 0
+END_MODELSET
+
+MODELSET
+	TYPE = 1
+	POS = 1950.00 0.00 -1050.00
+	ROT = 0 0 0
+END_MODELSET
+
+#------------------
+# ビル3(1)
+#------------------
+MODELSET
+	TYPE = 1
+	POS = 1250.00 0.00 150.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 0
+	POS = 1250.00 0.00 250.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 0
+	POS = 1250.00 0.00 350.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = 1250.00 0.00 450.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = 1250.00 0.00 550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 0
+	POS = 1250.00 0.00 650.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 0
+	POS = 1250.00 0.00 750.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 1
+	POS = 1250.00 0.00 850.00
+	ROT = 0 0 0
+END_MODELSET
+
+#------------------
+# ビル3(1)
+#------------------
+MODELSET
+	TYPE = 1
+	POS = 1950.00 0.00 150.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 11
+	POS = 1950.00 0.00 250.00
+	ROT = 0 90 0
+END_MODELSET
+
+MODELSET
+	TYPE = 0
+	POS = 1950.00 0.00 350.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = 1950.00 0.00 450.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 2
+	POS = 1950.00 0.00 550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 0
+	POS = 1950.00 0.00 650.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 11
+	POS = 1950.00 0.00 750.00
+	ROT = 0 90 0
+END_MODELSET
+
+MODELSET
+	TYPE = 1
+	POS = 1950.00 0.00 850.00
+	ROT = 0 0 0
+END_MODELSET
+
+#------------------
+# ビル3(1)
+#------------------
+MODELSET
+	TYPE = 5
+	POS = 1250.00 0.00 1350.00
+	ROT = 0 -180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 8
+	POS = 1350.00 0.00 1350.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 1
+	POS = 1450.00 0.00 1350.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = 1550.00 0.00 1350.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 1
+	POS = 1650.00 0.00 1350.00
+	ROT = 0 -180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 4
+	POS = 1750.00 0.00 1350.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = 1850.00 0.00 1350.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = 1950.00 0.00 1350.00
+	ROT = 0 180 0
+END_MODELSET
+
+#------------------
+# ビル3(1)
+#------------------
+MODELSET
+	TYPE = 5
+	POS = 1250.00 0.00 1850.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = 1350.00 0.00 1850.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = 1450.00 0.00 1850.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = 1550.00 0.00 1850.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = 1650.00 0.00 1850.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 6
+	POS = 1750.00 0.00 1850.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = 1850.00 0.00 1850.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = 1950.00 0.00 1850.00
+	ROT = 0 0 0
+END_MODELSET
+
+#------------------
+# ビル0(1)
+#------------------
+MODELSET
+	TYPE = 3
+	POS = -2150.00 0.00 50.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = -2050.00 0.00 50.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 1
+	POS = -1950.00 0.00 50.00
+	ROT = 0 -180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = -1850.00 0.00 50.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = -1750.00 0.00 50.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = -1650.00 0.00 50.00
+	ROT = 0 180 0
+END_MODELSET
+
+#------------------
+# ビル0(1)
+#------------------
+MODELSET
+	TYPE = 3
+	POS = -2150.00 0.00 550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = -2050.00 0.00 550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = -1950.00 0.00 550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 6
+	POS = -1850.00 0.00 550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = -1750.00 0.00 550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = -1650.00 0.00 550.00
+	ROT = 0 0 0
+END_MODELSET
+
+
+#------------------
+# ビル0(1)
+#------------------
+MODELSET
+	TYPE = 3
+	POS = -2150.00 0.00 1350.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = -2050.00 0.00 1350.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 1
+	POS = -1950.00 0.00 1350.00
+	ROT = 0 -180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = -1850.00 0.00 1350.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = -1750.00 0.00 1350.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = -1650.00 0.00 1350.00
+	ROT = 0 180 0
+END_MODELSET
+
+#------------------
+# ビル0(1)
+#------------------
+MODELSET
+	TYPE = 3
+	POS = -2150.00 0.00 1850.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = -2050.00 0.00 1850.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = -1950.00 0.00 1850.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 6
+	POS = -1850.00 0.00 1850.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = -1750.00 0.00 1850.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = -1650.00 0.00 1850.00
+	ROT = 0 0 0
+END_MODELSET
+
+#------------------
+# ビル0(1)
+#------------------
+MODELSET
+	TYPE = 3
+	POS = -2150.00 0.00 -550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = -2050.00 0.00 -550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = -1950.00 0.00 -550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 6
+	POS = -1850.00 0.00 -550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = -1750.00 0.00 -550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = -1650.00 0.00 -550.00
+	ROT = 0 0 0
+END_MODELSET
+
+#------------------
+# ビル0(1)
+#------------------
+MODELSET
+	TYPE = 3
+	POS = -2150.00 0.00 -1050.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = -2050.00 0.00 -1050.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 1
+	POS = -1950.00 0.00 -1050.00
+	ROT = 0 -180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = -1850.00 0.00 -1050.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = -1750.00 0.00 -1050.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = -1650.00 0.00 -1050.00
+	ROT = 0 180 0
+END_MODELSET
+
+#------------------
+# ビル0(1)
+#------------------
+MODELSET
+	TYPE = 3
+	POS = -2150.00 0.00 -1550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = -2050.00 0.00 -1550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = -1950.00 0.00 -1550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 6
+	POS = -1850.00 0.00 -1550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = -1750.00 0.00 -1550.00
+	ROT = 0 0 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = -1650.00 0.00 -1550.00
+	ROT = 0 0 0
+END_MODELSET
+
+#------------------
+# ビル0(1)
+#------------------
+MODELSET
+	TYPE = 3
+	POS = -2150.00 0.00 -2050.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = -2050.00 0.00 -2050.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 1
+	POS = -1950.00 0.00 -2050.00
+	ROT = 0 -180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 5
+	POS = -1850.00 0.00 -2050.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = -1750.00 0.00 -2050.00
+	ROT = 0 180 0
+END_MODELSET
+
+MODELSET
+	TYPE = 3
+	POS = -1650.00 0.00 -2050.00
+	ROT = 0 180 0
+END_MODELSET
+
+#------------------------------------------------------------------------------
+# プレイヤー情報
+#------------------------------------------------------------------------------
+
+#------------------
+# エグゾフレーム
+#------------------
+PLAYERSET
+	MOTION_FILENAME = data/exoN_motion.txt
+	POS = 500 0 50
+	ROT = 0 0 0
+END_PLAYERSET
+
+
+END_SCRIPT		# この行は絶対消さないこと！
